@@ -1,0 +1,500 @@
+@import "reset";
+@import "font";
+@import "variables";
+@import "mixins";
+
+
+body {
+  overflow-x: hidden;
+  line-height: 1.42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container-fluid {
+	min-width: 1024px;
+	margin: auto;
+}
+
+.container {
+	width: 900px;
+	margin: auto;
+}
+
+.container-menu {
+	width: 1124px;
+	margin: auto;
+}
+
+.container-amazing-team {
+	width: 620px;
+	margin: auto;
+}
+
+.container-bottom{
+	width: 680px;
+	margin: 0 auto;
+}
+
+.white {
+  color: #fff;
+}
+
+.bg {
+  background-color: rgba(0,0,0,0.70);
+  padding: 15px !important;
+}
+
+.flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+  justify-content: space-between;
+}
+
+.flex-row {
+	display: block;
+	justify-content: center;
+}
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/*
+-------------------------
+HEADER
+-------------------------
+*/
+header {
+  top: 0;
+	left: 0;
+	right: 0;
+	height: 530px;
+	position: relative;
+	background-image: url("../img/bg-header.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+	position: relative;
+	background-size: cover;
+
+  .menu {
+    top: 0;
+	  left: 0;
+	  right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+	  position: fixed;
+	  z-index: 1;
+
+    .logo img{
+    	float: left;
+      text-decoration: none;
+      font-family: "wisDom", "sans-serif";
+      font-weight: normal;
+      color: $yellowSun;
+      font-size: 1.9em;
+      @include clearFix;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+  	    margin-right: 45px;
+
+        &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-family: "calibri";
+        font-weight: normal !important;
+        font-size: 0.8em;
+        text-transform: uppercase;
+
+        &:hover {
+        color: #fed136 !important;
+	      transition: color 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+  .infos-header {
+    text-align: center;
+    color: #fff;
+    h2 {
+      font-family: "droidSerif", "sans-serif";
+      font-size: 2.5em;
+      font-weight: normal;
+      padding-top: 120px;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-size: 4.5em;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-top: 35px;
+      font-family: "montSerrat";
+    }
+    .btn{
+      @include btn;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+}
+
+
+/*
+------------------------------------
+SECTION SERVICES
+------------------------------------
+*/
+.section-services {
+  @include styleContent;
+  .bloc-contenu-service {
+    width: calc(100% / 3);
+    text-align: center;
+
+    h2 {
+      font-size: $size-txt-descriptions;
+      color: $title;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+    p{
+      line-height: 1.5;
+      color: $description;
+    }
+  }
+}
+
+
+/*
+-----------------------------------
+SECTION PORTFOLIO
+-----------------------------------
+*/
+.section-portfolio {
+  @include styleContent;
+  background-color: $bg-portfolio;
+  .bloc-item {
+    width: 31%;
+	  background-color: #fff;
+	  padding-bottom: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    img {
+      width: 100%;
+    	height: 280px;
+    }
+
+    h4 {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 18px 0 5px 0;
+      font-family: "montSerrat";
+      font-size: 0.9em;
+      color: $title;
+    }
+
+    p{
+      color: $description;
+      font-family: "droidSerif";
+      font-size: 0.9em;
+    }
+  }
+}
+
+
+/*
+-----------------------------------
+SECTION ABOUT US
+-----------------------------------
+*/
+.section-about-us {
+  @include styleContent;
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+@include clearFix;
+
+.bloc {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  line-height: 1.6;
+
+  .elem {
+    width: 35%;
+    h3 {
+      font-weight: bold;
+	    text-transform: uppercase;
+	    font-size: 1.4em;
+	    color: $title;
+      font-family: "montSerrat";
+    }
+    h4 {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.2em;
+      color: $title;
+      font-family: "montSerrat";
+    }
+    p {
+      margin-top: 15px;
+      color: $description;
+    }
+  }
+
+  img {
+    width: $value-about-us;
+    height: $value-about-us;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: block;
+    border: 5px solid #f0f0f0;
+  }
+
+  .cercle {
+    width: $value-about-us;
+    height: $value-about-us;
+    margin-left: $value-pourcentage;
+    border-radius: $value-pourcentage;
+    border: 5px solid #f0f0f0;
+    background-color: $yellowSun;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: "montSerrat";
+
+    h3 {
+      color: #fff;
+	    text-transform: uppercase;
+      padding-top: 25px;
+    }
+  }
+  .v-line {
+    width: 3px;
+    height: 90px;
+    background-color: #f0f0f0;
+    border: none;
+    margin-left: $value-pourcentage;
+    transform: translateX(-50%);
+    display: block;
+  }
+}
+}
+
+
+/*
+-----------------------------------
+SECTION OUR AMAZING TEAM
+-----------------------------------
+*/
+.section-amazing-team {
+  @include styleContent;
+  background-color: $bg-portfolio;
+
+  .bloc-cercle-team {
+    text-align: center;
+
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: $value-pourcentage;
+    }
+    h5 {
+      padding-top: 20px;
+      line-height: 1.6;
+      font-size: 0.9em;
+      font-weight: bold;
+      color: $title;
+    }
+    p {
+      color: $description;
+      margin-bottom: 15px;
+    }
+  }
+  .content-bottom {
+    text-align: center;
+    color: $description;
+    line-height: 1.5;
+    margin-top: 40px;
+  }
+
+  .logo-icon {
+    margin-top: 10px;
+	  width: 100%;
+	  text-align: center;
+
+    span {
+      display: inline-block;
+    	width: 40px;
+    	height: 40px;
+    	border-radius: 50%;
+    	border: 2px solid #000;
+    	vertical-align: middle;
+    	margin-right: 5px;
+      line-height: 40px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      i {
+        width: 100%;
+      	display: inline-block;
+      	font-size: 18px;
+      	text-align: center;
+      	color: #000;
+      }
+    }
+  }
+  .active-facebook:hover,
+  .active-pinterest:hover,
+  .active-twitter:hover,
+  .active-googlePlus:hover
+   {
+    @include iconHover;
+  }
+  .active-facebook:hover {
+    background-color: $bg-icon-facebook;
+  }
+  .active-pinterest:hover {
+    background-color: $bg-icon-pinterest;
+  }
+  .active-twitter:hover {
+    background-color: $bg-icon-twitter;
+  }
+  .active-googlePlus:hover {
+    background-color: $bg-icon-googlePlus;
+  }
+  // aside content inside the section
+  .content-bottom {
+	  padding-top: 40px;
+
+    img {
+    	width: 20%;
+    	text-align: center;
+    	display: inline-block;
+    	vertical-align: middle;
+      margin: 130px 0 0px 25px;
+    }
+  }
+}
+
+
+/*
+-----------------------------------
+SECTION CONTACT US
+-----------------------------------
+*/
+.section-contact-us {
+  @include styleContent;
+  background: #212121 url("../img/map-contact-us.png") no-repeat 105%;
+
+  .bloc-contact-us {
+	  width: 85%;
+	  margin: auto;
+    text-align: center;
+
+    .bloc-contact {
+      width: 50%;
+  	  padding: 0 20px;
+
+      .input-info {
+        width: 100%;
+      	padding: 10px;
+      	margin-bottom: 22px;
+      	border-radius: 2px;
+      	border: none;
+      	outline: none;
+      }
+
+      .textarea-info {
+      	width: 100%;
+      	padding: 8px;
+      	border: none;
+      	border-radius: 2px;
+      	outline: none;
+      	resize: none;
+      }
+    }
+    .btn {
+      cursor: pointer;
+      @include btn;
+      margin-top: 10px;
+    }
+  }
+}
+
+/*
+-----------------------------------
+SECTION FOOTER
+-----------------------------------
+*/
+.section-content-footer {
+  padding: 20px;
+  background-color: #fafafa;
+  font-family: "calibri", "sans-serif";
+
+  p {
+    display: inline-block;
+	  vertical-align: middle;
+  }
+  .logo-icon-footer {
+	width: 350px;
+	text-align: center;
+	min-height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+
+    span {
+      cursor: pointer;
+    	display: inline-block;
+    	vertical-align: middle;
+    	width: 40px;
+    	height: 40px;
+      line-height: 40px;
+    	background-color: #222;
+    	margin-right: 10px;
+    	border-radius: 50%;
+
+      &:last-of-type {
+      margin-right: 0;
+      }
+      i{
+        color: #fff;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

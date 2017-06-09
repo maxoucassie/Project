@@ -1,0 +1,50 @@
+@mixin clearFix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin btn {
+  color: #fff;
+  min-width: 200px;
+  background-color: $yellowSun;
+  padding: 20px 30px;
+  font-family: "calibri";
+  display: inline-block;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+
+  }
+}
+
+@mixin styleContent {
+  padding: 80px 0 80px 0;
+  font-family: "calibri";
+  .contenu-sections {
+    text-align: center;
+    h2 {
+      font-size: 2.2em;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    p {
+      color: $description;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@mixin iconHover {
+  transition: background-color 0.2s ease-in-out;
+	border: none;
+  i {
+    color: #fff;
+  }
+}
